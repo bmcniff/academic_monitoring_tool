@@ -5,6 +5,27 @@ import datetime
 from google.oauth2.service_account import Credentials
 
 
+# ---------- PASSWORD PROTECTION ----------
+# Use the password stored in Streamlit secrets
+PASSWORD = st.secrets.get("APP_PASSWORD", "changeme")
+
+# Session state to track login
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    pwd_input = st.text_input("Enter password to access the app", type="password")
+    if st.button("Login"):
+        if pwd_input == PASSWORD:
+            st.session_state.authenticated = True
+            st.experimental_rerun()  # reload the app to show the main UI
+        else:
+            st.error("Incorrect password")
+    st.stop()  # stop executing the rest of the app until authenticated
+# ----------------------------------------
+
+
+
 # ---------------- CONFIG ----------------
 SERVICE_ACCOUNT_FILE = "student-tracker-service-account.json"
 SPREADSHEET_NAME = "Assignment_tracking_sample_data"
