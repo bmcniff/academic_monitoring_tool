@@ -8,7 +8,7 @@ from google.oauth2.service_account import Credentials
 # ---------- PASSWORD PROTECTION ----------
 # Use the password stored in Streamlit secrets
 # PASSWORD = st.secrets.get("APP_PASSWORD", "changeme")
-PASSWORD = st.secrets.get("APP_PASSWORD")
+PASSWORD = st.secrets["APP_PASSWORD"]
 st.write("APP_PASSWORD in secrets?", "APP_PASSWORD" in st.secrets)
 
 # Session state to track login
