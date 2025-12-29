@@ -20,7 +20,8 @@ def get_worksheet():
     ]
 
     creds = Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
+        # SERVICE_ACCOUNT_FILE,
+        st.secrets["gcp_service_account"],
         scopes=scopes
     )
 
