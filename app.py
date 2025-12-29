@@ -7,7 +7,7 @@ from google.oauth2.service_account import Credentials
 
 # ---------------- CONFIG ----------------
 SERVICE_ACCOUNT_FILE = "student-tracker-service-account.json"
-SPREADSHEET_NAME = "Assignemnt_tracking_sample_data"
+SPREADSHEET_NAME = "Assignment_tracking_sample_data"
 WORKSHEET_NAME = "records"
 
 
