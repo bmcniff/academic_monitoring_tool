@@ -131,7 +131,7 @@ def upsert_value(student_name, date, assignment, lap, value):
 
 # ---------------- UI ----------------
 st.set_page_config(page_title="Academic Monitoring Tool", layout="centered")
-st.title("📘 Academic Monitoring Tool")
+st.title("Academic Monitoring Tool")
 
 df = load_sheet_as_df()
 
