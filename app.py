@@ -15,6 +15,8 @@ if "authenticated" not in st.session_state:
 
 if not st.session_state.authenticated:
     pwd_input = st.text_input("Enter password to access the app", type="password")
+    submit_button = st.form_submit_button("Login")
+    
     if st.button("Login"):
         if pwd_input == PASSWORD:
             st.session_state.authenticated = True
