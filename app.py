@@ -35,10 +35,10 @@ def load_sheet_as_df():
     data = ws.get_all_records()
     return pd.DataFrame(data)
 
-def load_sheet_as_df():
-    ws = get_worksheet()
-    data = ws.get_all_records()
-    return pd.DataFrame(data)
+# def load_sheet_as_df():
+#     ws = get_worksheet()
+#     data = ws.get_all_records()
+#     return pd.DataFrame(data)
 
 @st.cache_resource
 def get_sheet():
