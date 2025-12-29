@@ -48,7 +48,8 @@ def get_sheet():
     ]
 
     creds = Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
+        # SERVICE_ACCOUNT_FILE,
+        st.secrets["gcp_service_account"],
         scopes=scopes
     )
 
