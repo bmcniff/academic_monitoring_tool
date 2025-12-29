@@ -19,8 +19,7 @@ def get_worksheet():
         "https://www.googleapis.com/auth/drive"
     ]
 
-    creds = Credentials.from_service_account_file(
-        # SERVICE_ACCOUNT_FILE,
+    creds = Credentials.from_service_account_info(
         st.secrets["gcp_service_account"],
         scopes=scopes
     )
@@ -48,8 +47,7 @@ def get_sheet():
         "https://www.googleapis.com/auth/drive"
     ]
 
-    creds = Credentials.from_service_account_file(
-        # SERVICE_ACCOUNT_FILE,
+    creds = Credentials.from_service_account_info(
         st.secrets["gcp_service_account"],
         scopes=scopes
     )
